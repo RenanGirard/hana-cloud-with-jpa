@@ -15,8 +15,7 @@ import com.sap.cloud.sample.model.Usuario;
 import com.sap.cloud.sample.util.HibernateUtil;
 
 public class UsuarioDAO {
-
-	
+		
 	public Usuario selectByUserNameAndPassword(String userName, String password) {
 		Usuario usuario = null;
 		EntityManager em = HibernateUtil.getEntityManager();
