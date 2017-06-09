@@ -1,11 +1,17 @@
 package com.sap.cloud.sample.model;
 
+import java.util.Collection;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -29,13 +35,13 @@ public class Usuario {
 	@Column(name="SENHA")
 	private String senha;
 
-/*	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name="CONTA_ID", foreignKey=@ForeignKey(name="CONTA_USUARIO_FK"))
 	private Collection<Conta> contas;
 	
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name="LANCAMENTO_ID", foreignKey=@ForeignKey(name="LANCAMENTO_USUARIO_FK"))
-	private Collection<Lancamento>  lancamento;*/
+	private Collection<Lancamento>  lancamento;
 	
 	public Long getId() {
 		return id;
