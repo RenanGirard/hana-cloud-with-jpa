@@ -53,6 +53,7 @@ public class CategoriaController extends HttpServlet {
 
 		HttpSession httpSession = request.getSession();
 		Usuario usuarioConectado = (Usuario) httpSession.getAttribute("usuarioLogado");
+		
 		if (usuarioConectado == null) {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
 			dispatcher.forward(request, response);

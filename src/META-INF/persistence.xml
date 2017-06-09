@@ -6,6 +6,7 @@
         <class>com.sap.cloud.sample.model.Person</class>
         <class>com.sap.cloud.sample.model.Usuario</class>
         <class>com.sap.cloud.sample.model.Categoria</class>
+        <class>com.sap.cloud.sample.model.Banco</class>
         <properties>
             <property name="eclipselink.ddl-generation" value="create-tables" />
             <property name="eclipselink.logging.level" value="SEVERE" />

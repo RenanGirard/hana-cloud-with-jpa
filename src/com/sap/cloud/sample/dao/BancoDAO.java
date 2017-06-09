@@ -31,6 +31,7 @@ public class BancoDAO {
 		// TODO Auto-generated method stub
 		EntityManager entityManager = HibernateUtil.getEntityManager();
 		entityManager.getTransaction().begin();
+		banco = entityManager.find(Banco.class, banco.getId());
 		entityManager.remove(banco);
 		entityManager.getTransaction().commit();
 		entityManager.close();
@@ -42,7 +43,7 @@ public class BancoDAO {
 		List<Banco> bancos = null;
 		EntityManager entityManager = HibernateUtil.getEntityManager();
 		entityManager.getTransaction().begin();
-		bancos = entityManager.createQuery("from Banco").getResultList();
+		bancos = entityManager.createNamedQuery("AllBancos").getResultList();
 		entityManager.getTransaction().commit();
 		entityManager.close();
 		return bancos;
